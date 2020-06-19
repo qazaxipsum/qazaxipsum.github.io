@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
     <title>Qazax Ipsum</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <style>
         body {
-            background-color:#FAF3FC;
+            background-color: #FAF3FC;
         }
+
         .word-container {
             color: black;
             font-size: 2em;
-            margin-top:40px;
+            margin-top: 40px;
         }
+
         .generate-button {
-            position:absolute;
-            left:40px;
-            top:40px;
-            background-color:#442A9D !important;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            background-color: #442A9D !important;
         }
+
         @media only screen and (max-width: 1336px) {
             .generate-button {
-                position:static;
-                margin-top:40px;
-                width:100%;
+                position: static;
+                margin-top: 40px;
+                width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-            <button class="waves-effect waves-light btn generate-button" autofocus>Generate</button>
+        <button class="waves-effect waves-light btn generate-button"
+                autofocus>Generate</button>
     </div>
     <div class="container">
         <div class="word-container"></div>
@@ -40,8 +49,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script>
-        var QazaxIpsum = function () {
-        };
+        var QazaxIpsum = function () {};
         QazaxIpsum.WORDS_PER_SENTENCE_AVG = 24.460;
 
         QazaxIpsum.WORDS_PER_SENTENCE_STD = 5.080;
@@ -52,8 +60,11 @@
             'kiri', 'dığlatdın', 'qayır', 'əppəy', 'döyğa', 'göyüz',
             'beyjə', 'ayna durinan', 'bıy əzizin ölsün', 'şöytəli', 'murtta', 'mamoğlu',
             'ciji', 'yağlaşoy', 'öy', 'eşiy', 'vızqırt', 'dayna',
-            'suruxvat', 'sumsux', 'ölüm', 'çəkələy', 'dınqı', 'pırpız baş', 'siyəndər', 'usuf', 'sülöymən', 'bıy dərdin alem', 'ağrın alem', 'qavağında ölöm', 'qalet', 'basırıx', 'təntitmə',
-            'xışdıyaram','səni','çırtımına yiyə dursan?','sortuxla','mığı','qağa','nağarersan?','cöngə','qredit'
+            'suruxvat', 'sumsux', 'ölüm', 'çəkələy', 'dınqı', 'pırpız baş', 'siyəndər', 'usuf', 'sülöymən',
+            'bıy dərdin alem', 'ağrın alem', 'qavağında ölöm', 'qalet', 'basırıx', 'təntitmə',
+            'xışdıyaram', 'səni', 'çırtımına yiyə dursan?', 'sortuxla', 'mığı', 'qağa', 'nağarersan?', 'cöngə',
+            'qredit',
+            'qarantin', 'öydə otur', 'eşiyə çıxma', 'covid mirəti'
         ];
         QazaxIpsum.prototype.generate = function (num_words) {
             var words, ii, position, word, current, sentences, sentence_length, sentence;
@@ -176,7 +187,7 @@
             var key = event.key || event.keyCode;
 
             if (key === 'Enter' || key === 13) {
-                wordContainer.innerHTML = generator.generate();   
+                wordContainer.innerHTML = generator.generate();
             }
         });
         document.querySelector(".generate-button").onclick = function () {
@@ -184,4 +195,5 @@
         };
     </script>
 </body>
+
 </html>
